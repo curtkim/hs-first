@@ -1,0 +1,87 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1567ed260b3b71e7445b447ecf42db36fa03d5ec16f34bae16606ac6e31b9dd1
+
+name:           haskell-first
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-first#readme>
+homepage:       https://github.com/githubuser/haskell-first#readme
+bug-reports:    https://github.com/githubuser/haskell-first/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-first
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Lib
+      Simple
+  other-modules:
+      Paths_haskell_first
+  default-language: Haskell2010
+
+executable haskell-first-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_first
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      GLFW-b
+    , base >=4.7 && <5
+    , conduit
+    , gl
+    , haskell-first
+    , raw-strings-qq
+  default-language: Haskell2010
+
+test-suite haskell-first-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Ch3TypeSpec
+      Ch4FunctionSpec
+      Ch6HighOrderSpec
+      Ch7ModuleSpec
+      Ch8MyTypeSpec
+      ChBFunctorSpec
+      ChCMonadSpec
+      ConduitSpec
+      EtcSpec
+      L1FirstSpec
+      L2FundamentalSpec
+      L3RecursionSpec
+      L5HighOrderSpec
+      L6DataTypeSpec
+      StringSpec
+      Paths_haskell_first
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , conduit
+    , containers
+    , haskell-first
+    , hspec
+    , hspec-discover
+  default-language: Haskell2010
