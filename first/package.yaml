@@ -60,3 +60,5 @@ tests:
     - lens-aeson
     - aeson-qq
     - text
+    - bytestring
+    - scientific
