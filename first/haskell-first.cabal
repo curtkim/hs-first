@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d0b935bb876e3bc100169b21a2f2970c8b4b777df61ca49705663b601335f4f2
+-- hash: 8b3ef44afe8784058369c2b2bfbae58dd6bd5900d8f95927afff8063a85329da
 
 name:           haskell-first
 version:        0.1.0.0
@@ -73,6 +73,7 @@ test-suite haskell-first-test
       L6DataTypeSpec
       LensSpec
       StringSpec
+      Wiki2103FoldableSpec
       Wiki2109LensSpec
       Wiki2109LensSpec2
       Paths_haskell_first
