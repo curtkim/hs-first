@@ -56,4 +56,7 @@ tests:
     - containers
     - conduit
     - lens
+    - aeson
+    - lens-aeson
+    - aeson-qq
     - text
