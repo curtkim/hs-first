@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b560c8d13ead9c53cf4ac20f04ef54f839fb080890e3770fa9636a6a9cca3e7a
+-- hash: fb1e491f1e6d56d30c74bedd183346ceec5d10c71b4f46bf90521cbf6263f670
 
 name:           haskell-first
 version:        0.1.0.0
@@ -60,6 +60,7 @@ test-suite haskell-first-test
       ConduitSpec
       EtcSpec
       JsonSpec
+      Lambda.Ch01Spec
       Learn.Ch1FirstSpec
       Learn.Ch2FundamentalSpec
       Learn.Ch3RecursionSpec
