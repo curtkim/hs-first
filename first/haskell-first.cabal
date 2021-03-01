@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b59b87a643bdd2ecd2b6e69e1461b181e504fc1ca4eb811e904729d9eee50aba
+-- hash: b560c8d13ead9c53cf4ac20f04ef54f839fb080890e3770fa9636a6a9cca3e7a
 
 name:           haskell-first
 version:        0.1.0.0
@@ -77,9 +77,9 @@ test-suite haskell-first-test
       LensSpec
       LionTraverseSpec
       StringSpec
-      Wiki2103FoldableSpec
-      Wiki2109LensSpec
-      Wiki2109LensSpec2
+      Wikidoc.Ch2103FoldableSpec
+      Wikidoc.Ch2109LensSpec
+      Wikidoc.Ch2109LensSpec2
       Paths_haskell_first
   hs-source-dirs:
       test

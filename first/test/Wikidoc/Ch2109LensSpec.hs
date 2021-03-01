@@ -1,4 +1,4 @@
-module Wiki2109LensSpec where
+module Wikidoc.Ch2109LensSpec where
 
 import Test.Hspec
 import Test.QuickCheck

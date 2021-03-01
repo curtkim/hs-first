@@ -1,5 +1,5 @@
 {-# LANGUAGE TemplateHaskell, RankNTypes #-}
-module Wiki2109LensSpec2 where
+module Wikidoc.Ch2109LensSpec2 where
 
 import Test.Hspec
 import Test.QuickCheck

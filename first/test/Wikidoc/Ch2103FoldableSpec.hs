@@ -1,4 +1,5 @@
-module Wiki2103FoldableSpec where
+-- https://wikidocs.net/3153
+module Wikidoc.Ch2103FoldableSpec where
 
 import Test.Hspec
 import Test.QuickCheck
