@@ -1,4 +1,4 @@
-module L5HighOrderSpec where
+module Learn.Ch5HighOrderSpec where
 
 import Test.Hspec
 import Data.Char 

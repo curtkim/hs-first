@@ -1,5 +1,5 @@
 -- http://learnyouahaskell.com/higher-order-functions
-module Ch6HighOrderSpec where
+module LearnYou.Ch6HighOrderSpec where
 
 import Test.Hspec
 

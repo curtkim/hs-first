@@ -1,4 +1,4 @@
-module L3RecursionSpec where
+module Learn.Ch3RecursionSpec where
 
 import Test.Hspec
 import Data.Char 

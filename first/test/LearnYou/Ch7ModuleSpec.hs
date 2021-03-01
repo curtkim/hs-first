@@ -1,5 +1,5 @@
 -- http://learnyouahaskell.com/modules
-module Ch7ModuleSpec where
+module LearnYou.Ch7ModuleSpec where
 
 import Test.Hspec
 

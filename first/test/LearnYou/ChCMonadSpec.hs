@@ -1,4 +1,4 @@
-module ChCMonadSpec where -- Ch12MonadSpec
+module LearnYou.ChCMonadSpec where -- Ch12MonadSpec
 
 import Test.Hspec
 

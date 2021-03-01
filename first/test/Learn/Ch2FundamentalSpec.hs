@@ -1,8 +1,8 @@
-module L2FundamentalSpec where
+module Learn.Ch2FundamentalSpec where
 
 import Test.Hspec
 
-import Simple
+import Simple -- from src
 
 
 -- Branch

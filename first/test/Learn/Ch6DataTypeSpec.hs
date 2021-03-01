@@ -1,4 +1,4 @@
-module L6DataTypeSpec where
+module Learn.Ch6DataTypeSpec where
 
 import Test.Hspec
 

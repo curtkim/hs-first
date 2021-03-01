@@ -1,4 +1,4 @@
-module Ch4FunctionSpec where
+module LearnYou.Ch4FunctionSpec where
 
 import Test.Hspec
 

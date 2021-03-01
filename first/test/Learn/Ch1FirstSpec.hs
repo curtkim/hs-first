@@ -1,4 +1,4 @@
-module L1FirstSpec where
+module Learn.Ch1FirstSpec where
 
 import Test.Hspec
 

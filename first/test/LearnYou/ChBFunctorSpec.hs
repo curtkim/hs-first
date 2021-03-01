@@ -1,4 +1,4 @@
-module ChBFunctorSpec where
+module LearnYou.ChBFunctorSpec where
 
 import Test.Hspec
 

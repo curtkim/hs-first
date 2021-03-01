@@ -1,5 +1,5 @@
 -- http://learnyouahaskell.com/types-and-typeclasses
-module Ch3TypeSpec where
+module LearnYou.Ch3TypeSpec where
 
 import Test.Hspec
 

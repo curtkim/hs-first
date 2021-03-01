@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7054851c295ac86d6f7af3cfeec4ae9dc428179e6529653d2ec3e6c32427eda2
+-- hash: b59b87a643bdd2ecd2b6e69e1461b181e504fc1ca4eb811e904729d9eee50aba
 
 name:           haskell-first
 version:        0.1.0.0
@@ -57,22 +57,25 @@ test-suite haskell-first-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Ch3TypeSpec
-      Ch4FunctionSpec
-      Ch6HighOrderSpec
-      Ch7ModuleSpec
-      Ch8MyTypeSpec
-      ChBFunctorSpec
-      ChCMonadSpec
       ConduitSpec
       EtcSpec
       JsonSpec
-      L1FirstSpec
-      L2FundamentalSpec
-      L3RecursionSpec
-      L5HighOrderSpec
-      L6DataTypeSpec
+      Learn.Ch1FirstSpec
+      Learn.Ch2FundamentalSpec
+      Learn.Ch3RecursionSpec
+      Learn.Ch5HighOrderSpec
+      Learn.Ch6DataTypeSpec
+      LearnYou.Ch1IntroSpec
+      LearnYou.Ch2StartSpec
+      LearnYou.Ch3TypeSpec
+      LearnYou.Ch4FunctionSpec
+      LearnYou.Ch6HighOrderSpec
+      LearnYou.Ch7ModuleSpec
+      LearnYou.Ch8MyTypeSpec
+      LearnYou.ChBFunctorSpec
+      LearnYou.ChCMonadSpec
       LensSpec
+      LionTraverseSpec
       StringSpec
       Wiki2103FoldableSpec
       Wiki2109LensSpec

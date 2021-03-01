@@ -1,4 +1,4 @@
-module Ch8MyTypeSpec where
+module LearnYou.Ch8MyTypeSpec where
 
 import Test.Hspec
 
