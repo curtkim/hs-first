@@ -6,6 +6,7 @@ import Test.Hspec
 import qualified Data.Map as Map  
 import qualified Data.Set as Set  
 
+-- module is a collection of related functions, types and typeclasses
 
 -- Map
 findKey :: (Eq k) => k -> [(k,v)] -> Maybe v  

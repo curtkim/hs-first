@@ -3,22 +3,22 @@ module LearnYou.Ch8MyTypeSpec where
 import Test.Hspec
 
 
-data Person0 = Person0 String String Int Float String String deriving (Show)  
+data Person0 = Person0 String String Int Float String String deriving (Show)
 
-data Person = Person { 
-  firstName :: String, 
-  lastName :: String, 
-  age :: Int, 
-  height :: Float, 
-  phoneNumber :: String, 
+data Person = Person {
+  firstName :: String,
+  lastName :: String,
+  age :: Int,
+  height :: Float,
+  phoneNumber :: String,
   flavor :: String
 } deriving (Show)
 
 data Car = Car {
-  company :: String, 
-  model :: String, 
+  company :: String,
+  model :: String,
   year :: Int
-} deriving (Show)  
+} deriving (Show)
 
 
 -- Type Parameters(c++ template)
@@ -28,56 +28,71 @@ data Car = Car {
 
 
 -- Type Class
-data Person2 = Person2 {   
-  fName :: String, 
-  lName :: String, 
-  myage :: Int  
-} deriving (Eq, Show, Read) 
+data Person2 = Person2 {
+  fName :: String,
+  lName :: String,
+  myage :: Int
+} deriving (Eq, Show, Read)
 
 
 -- yes or no typeclass
 class YesNo a where
   yesno :: a -> Bool
 
-instance YesNo Int where  
-  yesno 0 = False  
-  yesno _ = True  
+instance YesNo Int where
+  yesno 0 = False
+  yesno _ = True
 
-instance YesNo [a] where  
-  yesno [] = False  
-  yesno _ = True  
+instance YesNo [a] where
+  yesno [] = False
+  yesno _ = True
 
-instance YesNo Bool where  
+instance YesNo Bool where
   yesno = id
 
-instance YesNo (Maybe a) where  
-  yesno (Just _) = True  
-  yesno Nothing = False  
+instance YesNo (Maybe a) where
+  yesno (Just _) = True
+  yesno Nothing = False
 
-yesnoIf :: (YesNo y) => y -> a -> a -> a  
-yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult  
+yesnoIf :: (YesNo y) => y -> a -> a -> a
+yesnoIf yesnoVal yesResult noResult = if yesno yesnoVal then yesResult else noResult
 
+
+
+data Shape = Circle Float Float Float | 
+              Rectangle Float Float Float Float 
+              deriving (Show) 
+
+surface :: Shape -> Float
+surface (Circle _ _ r) = pi * r ^ 2
+surface (Rectangle x1 y1 x2 y2) = (abs $ x2 - x1) * (abs $ y2 - y1)
 
 
 spec :: Spec
 spec = do
 
-  it "record" $ do
-    let guy = Person0 "Buddy" "Finklestein" 43 184.2 "526-2928" "Chocolate"  
-    show guy `shouldBe` "Person0 \"Buddy\" \"Finklestein\" 43 184.2 \"526-2928\" \"Chocolate\""
-  
-  it "record car" $ do
-    let car = Car {company="Ford", model="Mustang", year=1967}  
-    show car `shouldBe` "Car {company = \"Ford\", model = \"Mustang\", year = 1967}"
-    company car `shouldBe` "Ford"
-    year car `shouldBe` 1967
+  describe "Algebraic data types intro" $ do
+    it "shape surface" $ do
+      surface (Circle 10 20 10) `shouldBe` 314.15927
+      surface (Rectangle 0 0 100 100) `shouldBe` 10000.0
+
+  describe "Record Syntax" $ do
+    it "record" $ do
+      let guy = Person0 "Buddy" "Finklestein" 43 184.2 "526-2928" "Chocolate"
+      show guy `shouldBe` "Person0 \"Buddy\" \"Finklestein\" 43 184.2 \"526-2928\" \"Chocolate\""
+
+    it "record car" $ do
+      let car = Car {company="Ford", model="Mustang", year=1967}
+      show car `shouldBe` "Car {company = \"Ford\", model = \"Mustang\", year = 1967}"
+      company car `shouldBe` "Ford"
+      year car `shouldBe` 1967
 
   it "type class" $ do
-    let adRock = Person2 {fName = "Adam", lName = "Horovitz", myage = 41}  
-    let mca = Person2 {fName = "Adam", lName = "Yauch", myage = 44}  
+    let adRock = Person2 {fName = "Adam", lName = "Horovitz", myage = 41}
+    let mca = Person2 {fName = "Adam", lName = "Yauch", myage = 44}
     mca == adRock `shouldBe` False
     mca == mca `shouldBe` True
-    
+
   it "yesno" $ do
     yesno "haha" `shouldBe` True
     yesno (length []) `shouldBe` False
