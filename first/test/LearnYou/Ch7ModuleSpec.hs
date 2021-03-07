@@ -7,7 +7,7 @@ import qualified Data.Map as Map
 import qualified Data.Set as Set  
 
 
--- List
+-- Map
 findKey :: (Eq k) => k -> [(k,v)] -> Maybe v  
 findKey key [] = Nothing  
 findKey key ((k,v):xs) = if key == k  
@@ -21,24 +21,23 @@ findKey2 key = foldr (\(k,v) acc -> if key == k then Just v else acc) Nothing
 spec :: Spec
 spec = do
 
-  it "List.findKey" $ do
-    let phoneBook = [
-                      ("betty","555-2938"),  
-                      ("bonnie","452-2928"),  
-                      ("patsy","493-2928"),
-                      ("lucille","205-2928"),  
-                      ("wendy","939-8282"),  
-                      ("penny","853-2492")
-                    ]
+  describe "Map" $ do
 
-    findKey "patsy" phoneBook `shouldBe` Just "493-2928"
-    findKey "curt" phoneBook `shouldBe` Nothing
+    it "findKey Association lists (also called dictionaries)" $ do
+      let phoneBook = [
+                        ("betty","555-2938"),  
+                        ("bonnie","452-2928"),  
+                        ("patsy","493-2928"),
+                        ("lucille","205-2928"),  
+                        ("wendy","939-8282"),  
+                        ("penny","853-2492")
+                      ]
 
-    findKey2 "patsy" phoneBook `shouldBe` Just "493-2928"
-    findKey2 "curt" phoneBook `shouldBe` Nothing
+      findKey "patsy" phoneBook `shouldBe` Just "493-2928"
+      findKey "curt" phoneBook `shouldBe` Nothing
 
-
-  describe "Map" $ do 
+      findKey2 "patsy" phoneBook `shouldBe` Just "493-2928"
+      findKey2 "curt" phoneBook `shouldBe` Nothing
 
     it "null" $ do 
       Map.null Map.empty `shouldBe` True

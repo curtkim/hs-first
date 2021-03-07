@@ -1,6 +1,10 @@
 ## Reference
-- http://learnyouahaskell.com/chapters
+- https://1ambda.github.io/haskell/
 - http://learn.hfm.io/
+- http://learnyouahaskell.com/chapters
+- https://wikidocs.net/3153
+
+## opengl
 - https://lokathor.gitbooks.io/using-haskell/content/opengl/hello-window.html 
 
 ## dir
